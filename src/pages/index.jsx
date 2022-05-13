@@ -11,40 +11,24 @@ import {
 import styles from "../styles/Home.module.css";
 // import component FooterHome
 import Footer from "../components/Footer";
-import Menu from "../components/Menu";
+import NavBar from "../components/NavBar";
+import Hero from "../components/Hero";
+import Carousel from "../components/Carousel";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Heading>
         <title>AmorMiau</title>
-        <Image
-          src="https://img.icons8.com/external-justicon-flat-justicon/200/external-cat-dog-and-cat-justicon-flat-justicon-4.png"
-          alt="logo"
-          h="auto"
-          w="auto"
-          m="auto"
-          // center image
-        />
-        <Text
-          fontSize="7xl"
-          fontWeight="bold"
-          textAlign="center"
-          // mb="px"
-          fontFamily="monaco"
-          bgGradient="linear-gradient(to right, #ffb6c1, #ff69b4)"
-          bgClip="text"
-        >
-          Amor Miau
-        </Text>
-        <Menu />
+        <NavBar />
       </Heading>
 
-      <main className={styles.main}>
-        <p className={styles.description}>
+      <main>
+        <Hero />
+        {/* <p className={styles.description}>
           Amor Miau é uma ONG de adoção de gatos, que resgata, cuida e busca
           ajudar pessoas a encontrarem gatos que não possuem um lar.
-        </p>
+        </p> */}
       </main>
 
       {/* <footer className={styles.footer}>

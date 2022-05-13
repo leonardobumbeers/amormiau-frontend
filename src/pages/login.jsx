@@ -16,8 +16,10 @@ import {
   Checkbox,
   Section,
   useToast,
+  Heading,
 } from "@chakra-ui/react";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 export default function login() {
   const [email, setEmail] = useState("");
@@ -83,7 +85,7 @@ export default function login() {
   const toastError = () => {
     return toast({
       title: "Erro ao realizar login!",
-      position: "bottom-right",
+      position: "top",
       description: "Email ou senha incorretos.",
       status: "error",
       duration: 9000,
@@ -93,45 +95,24 @@ export default function login() {
 
   return (
     <Fragment>
-      <Flex justify="center" align="center" bg="gray.100" w="100vw" h="85vh">
+      <NavBar />
+      <Flex justify="center" align="center" bg="gray.100" w="100vw" h="70vh">
         <Box
-          maxW="xl"
           borderWidth="1px"
           borderRadius="xl"
           bg="white"
-          h="500px"
+          h={460}
+          w={380}
           boxShadow="lg"
           borderColor="gray.200"
           borderStyle="solid"
           p="10px"
         >
-          <Image
-            src="https://img.icons8.com/external-justicon-flat-justicon/200/external-cat-dog-and-cat-justicon-flat-justicon-4.png"
-            alt="logo"
-            flex="1"
-            h="90px"
-            w="auto"
-            m="auto"
-            // center imageimport FooterHome from "../components/FooterHome";
-          />
-          <Text
-            fontSize="xl"
-            fontWeight="bold"
-            textAlign="center"
-            // mb="px"
-            fontFamily="monaco"
-            bgGradient="linear-gradient(to right, #ffb6c1, #ff69b4)"
-            bgClip="text"
-          >
-            Amor Miau
-          </Text>
-          {/* {error ? <LoginError /> : null} */}
           <form onSubmit={handleSubmit}>
             <FormControl
               marginBlock="1rem"
               marginTop="sticky"
               position="linear"
-              marginBottom="10px"
               padding="10px"
               width="100%"
               height="100%"
@@ -141,6 +122,7 @@ export default function login() {
                 fontSize="md"
                 fontWeight="bold"
                 color="gray.500"
+                mt={2}
               >
                 Email
               </FormLabel>
@@ -159,7 +141,7 @@ export default function login() {
                 htmlFor="password"
                 fontSize="md"
                 fontWeight="bold"
-                marginTop="5"
+                mt={10}
                 color="gray.500"
               >
                 Senha
@@ -191,7 +173,7 @@ export default function login() {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                marginTop="15px"
+                mt={50}
               >
                 <Checkbox
                   id="remember"
@@ -211,13 +193,12 @@ export default function login() {
                 justifyContent="center"
                 alignItems="center"
                 flexDirection="column"
-                // marginTop="10px"
+                mt={30}
               >
                 <Button
                   type="submit"
                   size="md"
                   width="100%"
-                  marginTop="1.5rem"
                   marginBottom="10px"
                   bgGradient="linear(to-r, #ffb6c1, #ff69b4)"
                   color="gray.100"

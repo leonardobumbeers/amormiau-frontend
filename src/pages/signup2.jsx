@@ -12,6 +12,8 @@ import {
   Link,
   Checkbox,
   useToast,
+  useBreakpointValue,
+  GridItem,
 } from "@chakra-ui/react";
 import { viewIcon, viewOffIcon } from "@chakra-ui/icons";
 
@@ -34,6 +36,7 @@ export default function signup() {
   const [redirectToLogin, setRedirectToLogin] = useState(false);
   const toast = useToast();
   const [loading, setLoading] = useState(false);
+  const colspan = useBreakpointValue({ base: 2, md: 1 });
 
   const toastSuccess = () => {
     toast({
@@ -109,7 +112,7 @@ export default function signup() {
     <Fragment>
       <Flex justifyContent="center" alignItems="center" h="100vh">
         <Box
-          maxW="auto"
+          // maxW="auto"
           maxH="auto"
           p={10}
           w="40%"
@@ -130,9 +133,11 @@ export default function signup() {
               mb={5}
             />
             <InputGroup
-              flexDirection="space-between"
-              justifyContent="center"
-              alignItems="baseline"
+            // flexDirection="space-between"
+            // justifyContent="center"
+            // alignItems="baseline"
+            // direction={{ base: "space-between", md: "row" }}
+            // py={[0, 10, 20]}
             >
               <FormLabel htmlFor="cpf">CPF</FormLabel>
               <Input
@@ -281,7 +286,7 @@ export default function signup() {
                   fontSize="md"
                   color="gray.500"
                 >
-                  Aceito os Termos de Uso event Política de Privacidade
+                  Aceito os Termos de Uso e Política de Privacidade
                 </Text>
               </Checkbox>
               <Text
