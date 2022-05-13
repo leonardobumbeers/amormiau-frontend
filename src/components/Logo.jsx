@@ -1,6 +1,6 @@
 import { Image, Text, Flex, Box } from "@chakra-ui/react";
 
-export default function logo() {
+export default function Logo() {
   return (
     // cat image
     <>

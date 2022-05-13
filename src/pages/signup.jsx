@@ -22,10 +22,9 @@ import {
   Link,
 } from "@chakra-ui/react";
 import Footer from "../components/Footer";
-import States from "../components/States";
 import NavBar from "../components/NavBar";
 
-export default function signup() {
+export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -21,7 +21,7 @@ import {
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-export default function login() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
